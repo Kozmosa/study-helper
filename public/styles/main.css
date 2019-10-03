@@ -26,6 +26,16 @@
     border-bottom-right-radius: 0.65rem;
 }
 
+.radius-wrapper-pure {
+    display: block;
+    border-radius: 0.65rem;
+    border: 0rem solid;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.05rem;
+}
+
 .dictIframe {
     max-width: 100%;
     height: 100%;
@@ -106,6 +116,10 @@
     color: rgb(77, 81, 84);
 }
 
+.text-ivorywhite {
+    color: #fffbf0;
+}
+
 /* Containers */
 .main-container {
     padding: 0.5rem;
@@ -117,6 +131,9 @@
 }
 
 /* Texts */
+.text-italic {
+    font-style: italic;;
+}
 title2 {
     display: block;
     font-size: 1.5rem;
@@ -146,6 +163,15 @@ text2 {
     margin-inline-end: 0px;
 }
 
+text3 {
+    display: block;
+    font-size: 1.17rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 text-center {
     display: flex;
     justify-content: center;
@@ -166,4 +192,10 @@ text-center {
         position: relative;
         height: 1.5rem;
     }
+}
+
+/* Hypertext Link */
+.articleLink {
+    font-size: 1.25rem;
+    text-decoration: 0.1rem;
 }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "parcel build public/src/index.html"
+    "build": "parcel build public/src/index.html --no-source-maps",
+    "dev": "nodemon app.js",
+    "dev-front": "del /q dist & parcel serve public/src/index.html"
   },
   "author": "xuyang1638",
   "license": "ISC",

@@ -14,4 +14,4 @@ class Tool {
     }
 }
 
-export { Tool }
+module.exports = Tool
