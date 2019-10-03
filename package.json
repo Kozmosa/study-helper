@@ -1,0 +1,18 @@
+{
+  "name": "study-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "parcel build public/src/index.html"
+  },
+  "author": "xuyang1638",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mdui": "^0.4.3",
+    "pug": "^2.0.4",
+    "request": "^2.88.0",
+    "showdown": "^1.9.0"
+  }
+}

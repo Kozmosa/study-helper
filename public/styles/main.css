@@ -1,0 +1,169 @@
+/* Wrapper and box */
+.button-box {
+    border: 0px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .05);
+    border-radius: 0.65rem;
+    width: 16rem;
+    height: 9rem;
+    padding: 0.75rem;
+    padding-left: 1.5rem;
+    margin: 0;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+}
+
+#button-box {
+    padding: 0.75rem;
+    padding-left: 1.5rem;
+    margin: 0;
+    text-align: left;
+}
+
+.radius-wrapper {
+    display: block;
+    border-bottom-left-radius: 0.65rem;
+    border-bottom-right-radius: 0.65rem;
+}
+
+.dictIframe {
+    max-width: 100%;
+    height: 100%;
+    border: 0px solid white;
+    padding: 0px;
+    margin: 0%;
+}
+
+
+/* Background Color */
+.color-bili-pink {
+    background-image: linear-gradient(to right, rgb(255, 77, 160), rgb(213, 64, 134));
+}
+
+.color-zhihu-blue {
+    background-image: linear-gradient(to right, rgb(28, 160, 255), rgb(24, 140, 223));
+}
+
+.color-wechat-green {
+    background-image: linear-gradient(to right, rgb(28, 208, 4), rgb(23, 170, 3));
+}
+
+.color-gray {
+    background-image: linear-gradient(to right, rgb(77, 81, 84), rgb(63, 66, 69));
+}
+
+.color-jike-yellow {
+    background-image: linear-gradient(to right, rgb(255, 197, 23), rgb(230, 177, 21));
+}
+
+.color-china-red {
+    background-image: linear-gradient(to right, rgb(255, 66, 79), rgb(230, 60, 71));
+}
+
+/* Pure colors */
+.color-pure-japan-sakura {
+    background: #bf242a;
+}
+
+.color-pure-japan-deepblue {
+    background: #426579;
+}
+
+.color-pure-japan-white {
+    background: #d4dcda;
+}
+
+.color-pure-japan-cyan {
+    background: #028760;
+}
+
+.color-pure-china-navy {
+    background: #2e4e7e;
+}
+
+.color-pure-china-cinnabar {
+    background: #ff461f;
+}
+
+.color-pure-china-moonwhite {
+    background: #d6ecf0;
+}
+
+.color-pure-china-ivorywhite {
+    background: #fffbf0;
+}
+
+.color-pure-china-deepblue {
+    background: #1685a9;
+}
+
+/* Forgeround Colors */
+.text-white {
+    color: #ffffff;
+}
+
+.text-grey {
+    color: rgb(77, 81, 84);
+}
+
+/* Containers */
+.main-container {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.white-br {
+    height: 1.5rem;
+}
+
+/* Texts */
+title2 {
+    display: block;
+    font-size: 1.5rem;
+    margin-block-start: 0.83rem;
+    margin-block-end: 0.83rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+title3 {
+    display: block;
+    font-size: 1.17rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+text2 {
+    display: block;
+    font-size: 1.5rem;
+    margin-block-start: 0.83rem;
+    margin-block-end: 0.83rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsive design */
+@media screen and(max-width: 500px) {
+    .responsive-white-br {
+        position: relative;
+        height: 0%;
+    }
+}
+
+@media screen and(min-width: 500px) {
+    .responsive-white-br {
+        position: relative;
+        height: 1.5rem;
+    }
+}

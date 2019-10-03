@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mdui": "^0.4.3",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  }
+}

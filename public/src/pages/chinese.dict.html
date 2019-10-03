@@ -1,0 +1,53 @@
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字典 - 学习助手</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../node_modules/mdui/dist/css/mdui.min.css">
+</head>
+
+<body>
+    <div class="radius-wrapper color-zhihu-blue text-white" id="toolbar">
+        <text-center>
+            <title2>
+                汉语词典
+            </title2>
+        </text-center>
+    </div>
+    <div class="main-container" id="mainContainer">
+        <div class="mdui-container" id="mduiContainer">
+            <div id="searchForm">
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">要查询的字</label>
+                    <input class="mdui-textfield-input" type="text" id="sWord" />
+                </div>
+                <text-center>
+                    <button class="mdui-btn mdui-ripple mdui-raised mdui-color-pink" id="searchBtn">
+                        Search
+                    </button>
+                </text-center>
+            </div>
+        </div>
+    </div>
+    <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../../node_modules/mdui/dist/js/mdui.min.js"></script>
+    <script>
+        window.onload = function () {
+            let searchBtn = document.querySelector('#searchBtn')
+            let mainContainer = document.querySelector('#mainContainer')
+            searchBtn.addEventListener('click', (e) => {
+                // Get input
+                searchWord = document.querySelector('#sWord').value
+                newWin = window.open('https://hanyu.baidu.com/s?wd=' + searchWord, "_blank", "")
+                newWin.document.querySelector('body').removeChild(newWin.document.querySelector('#search-bar'))
+                console.log('OK')
+            })
+        }
+    </script>
+</body>
+
+</html>
