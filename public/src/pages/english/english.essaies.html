@@ -7,6 +7,13 @@
     <title>英语范文 - 学习助手</title>
     <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui/dist/css/mdui.min.css">
+    <style>
+        a {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,7 +56,7 @@
                 const mdContent = utils.Crypto.Base64.Encode(res.content)
                 utils.Network.Get(
                     `/api/render?mdContent=${mdContent}&title=${title}&author=${author}&tid=${tid}`, (
-                    res) => {
+                        res) => {
                         // 获取html内容
                         wrapper.innerText = res.content
                         document.write(res.content)
@@ -66,6 +73,7 @@
                 totalQuantityEl.innerText = res.total
                 for (let i = 0; i < res.details.length; i++) {
                     // 遍历
+                    const newBr = document.createElement('br')
                     const newArticleLink = document.createElement('a')
                     newArticleLink.className = 'articleLink text-ivorywhite text-italic'
                     newArticleLink.innerText = res.details[i].title
@@ -75,6 +83,7 @@
                         showEssay(res.details[i].id)
                     })
                     essayListEl.appendChild(newArticleLink)
+                    essayListEl.appendChild(newBr)
                 }
             })
         }

@@ -1,0 +1,81 @@
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>英语翻译 - 学习助手</title>
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui/dist/css/mdui.min.css">
+    <style>
+        a {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="radius-wrapper color-zhihu-blue text-white" id="toolbar">
+        <text-center>
+            <title2>
+                Translation
+            </title2>
+        </text-center>
+    </div>
+    <div class="main-container" id="mainContainer">
+        <div class="mdui-container" id="mduiContainer">
+            <div class="mdui-row">
+                <div class="mdui-col-xs-16">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">原文</label>
+                        <input id="sourceText" class="mdui-textfield-input" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-row text-center">
+                <div class="mdui-col-xs-16">
+                    <button id="transBtn" class="mdui-ripple mdui-btn mdui-color-indigo">
+                        Translate
+                    </button>
+                </div>
+            </div>
+            <div class="mdui-row text-center">
+                <div class="mdui-col-xs-16">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/utils.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdui/dist/js/mdui.min.js"></script>
+    <script>
+        window.onload = function () {
+            const $$ = mdui.JQ
+            const utils = window.Utils
+            let transBtn = document.querySelector('#transBtn')
+            let resultWrapper = document.querySelector('#resultWrapper')
+            var dialogInst = new mdui.Dialog(`<div class="mdui-dialog" id="dialog">
+                <div class="mdui-dialog-title">Loading</div>
+                <div class="mdui-dialog-content">
+                    <div class="mdui-progress">
+                        <div class="mdui-progress-indeterminate"></div>
+                    </div>
+                </div>
+            </div>`);
+            transBtn.addEventListener('click', (e) => {
+                // Get values
+                const value = $$('#sourceText').val()
+                console.log(value)
+                dialogInst.toggle()
+                utils.Network.Get('/api/translate?sourceText=' + value, (res) => {
+                    dialogInst.toggle()
+                    mdui.alert(res.result, '翻译结果')
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -7,38 +7,38 @@
     <title>语文 - 学习助手</title>
     <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui/dist/css/mdui.min.css">
-</head>
+</hea
 
-<body class="color-pure-china-moonwhite">
+<body>
     <div class="mdui-container">
         <div class="main-container">
             <div class="mdui-row">
                 <h1 class="text-grey">Chinese</h1>
             </div>
             <div class="mdui-row">
-                <div id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 button-box color-pure-china-cinnabar">
+                <a id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 button-box color-pure-china-cinnabar" href="./chinese.dict.html">
                     <title2>Dict</title2>
                     <title3>Powered by Baidu, Developed by Xuyang</title3>
-                </div>
+                </a>
                 <div class="mdui-col-lg-1"><div class="mdui-row white-br"></div></div>
-                <div id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 button-box color-pure-china-navy">
+                <a id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 button-box color-pure-china-navy" href="https://xuyang1638.github.io/hitokoto">
                     <title2>Traditional Poems</title2>
                     <title3>Developed by Xuyang</title3>
-                </div>
+                </a>
             </div>
             <div class="mdui-row white-br"></div>
             <div class="mdui-row">
-                <div id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 button-box color-jike-yellow text-grey">
-                    <title2>English</title2>
-                    <title3>Developed by Xuyang</title3>
-                </div>
+                <a id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 color-jike-yellow text-grey button-box">
+                    <title2>Compositions</title2>
+                    <title3>Powered by Baidu, Developed by Xuyang</title3>
+                </a>
                 <div class="mdui-col-lg-1">
                     <div class="mdui-row white-br"></div>
                 </div>
-                <div id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 button-box color-china-red">
+                <a id="button-box" class="mdui-col-lg-5 mdui-col-sm-6 button-box color-china-red">
                     <title2>Chinese</title2>
                     <title3>Developed by Xuyang</title3>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -46,6 +46,14 @@
     <script src="https://cdn.jsdelivr.net/npm/mdui/dist/js/mdui.min.js"></script>
     <script src="../../js/utils.js"></script>
     <script src="../../js/main.js"></script>
+    <script>
+        window.onload = function(){
+            const compositionLink = document.querySelectorAll('#button-box')[2]
+            compositionLink.addEventListener('click', (e) => {
+                window.location.href = 'https://hanyu.baidu.com/zuowen?from=hanyu_app#/category'
+            })
+        }
+    </script>
 </body>
 
 </html>

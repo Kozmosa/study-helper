@@ -1,12 +1,1 @@
-{
-    "status": {
-        "total": 1,
-        "details": [{
-            "title": "My friend Mike",
-            "id": 0
-        }]
-    },
-    "details": [
-        "I have a good friend. His name is Mike. I think he is a good listener. It is very important to me."
-    ]
-}
+{"status":{"total":2,"details":[{"title":"My friend Mike","id":0},{"title":"fuck","id":1}]},"details":["I have a good friend. His name is Mike. I think he is a good listener. It is very important to me.","#fuck"]}
